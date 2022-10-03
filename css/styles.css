@@ -4,10 +4,16 @@
 
 html {
     font-size: 11px;
+    color: #b5b5ba;
 }
 
-body * {
+h1,h2,h3,h4,h5,h6,header,div,p,li,td,button,input,a,dt,dd,abbr,textarea {
     font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+kbd,code {
+    font-family: 'Roboto Mono', monospace;
 }
 
 h6 {
@@ -34,6 +40,139 @@ h1 {
     font-size: 3.8rem;
 }
 
+a {
+    color: #2a8aff;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5vh;
+    margin: none;
+    padding: none
+}
+
+.navbar-section {
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    margin: none;
+    padding: none;
+    border-right: 1px solid #777;
+    border-left: 1px solid #777;
+}
+
+#navbar:first-child {
+    border-left: none;
+}
+
+#navbar:last-child {
+    border-right: none;
+}
+
+.navbar-section * {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex: 1;
+    height: 5vh;
+    border-right: 1px solid #777;
+}
+
+#navbar:last-child * {
+    border-right: none;
+    border-left: 1px solid #777;
+}
+
+.navbar-section button:hover,a:hover {
+    background-color: #29292f;
+}
+
 .flexrow {
-    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin: none;
+    padding: none;
+}
+
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin: none;
+    padding: none;
+}
+
+.c-1-12,.c-2-12,.c-3-12,.c-4-12,.c-5-12,.c-6-12,.c-7-12,.c-8-12,.c-9-12,.c-10-12,.c-11-12,.c-12-12 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    background-color: #20202a;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-container {
+    background-color: #20202a;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    justify-content: center;
+}
+
+.media-container img,audio,video,canvas {
+    max-width: 90%;
+    flex: 1 1 auto;
+    height: auto;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+thead,tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+td {
+    padding: 20px;
+    width: 48%;
+    border-bottom: 1px solid #999;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    display: block;
+    flex: 1 1 auto;
+    padding: 10px;
+    border: 1px solid #888;
+    cursor: pointer;
+}
+
+#main,#nav,#footer {
+    animation: fadeInDown;
+    animation-delay: 250ms;
+    animation-duration: 350ms;
 }
